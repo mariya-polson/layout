@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background-color: aquamarine;
+}
+html {
+  font-family: Poppins, sans-serif;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 550px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  /* background-color: #f1f1f1; */
+  /* height: 100%; */
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+  .row.content {
+    height: auto;
+  }
+}
+.dashboard-color {
+  border: 2px solid red;
+  background-color: #ffffff;
+}
+
+.main-color {
+  border: 2px solid rebeccapurple;
+  margin: 75px 0 0 0;
+}
+
+.left-menu {
+  background: transparent linear-gradient(190deg, #501769 0%, #382780 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 0px 0px 0px 5px;
+  opacity: 1;
+}
+
+.right-menu {
+  background-color: #ffffff;
+}
+
+/* -----------------------------------left Menu-------------------------------------------------------------- */
+.header {
+  padding: 2em 0.5em;
+  text-align: center;
+
+  .alex {
+    width: 100px;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #ada9bf;
+    margin-top: 0px;
+  }
+}
+
+ul.sidebar-menu {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.sidebar-menu li a span {
+  margin-right: 47px;
+  color: #fff;
+}
+
+.sidebar-menu li a {
+  padding: 18px 18px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar-menu li a:hover {
+  background-color: gba(0, 0, 0, 0.2);
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+li.have-children ul {
+  // padding: 0px;
+  list-style-type: disc;
+  padding-left: 87px;
+}
+li.have-children span img {
+  top: 17px;
+  left: 24px;
+  position: absolute;
+}
+
+li.have-children ul li a {
+  font-size: 10px;
+  color: #ada9bf;
+  margin: 0;
+  padding: 0;
+}
+
+li.have-children ul li a:hover {
+  color: #fff;
+}
+
+li.have-children,
+li {
+  position: relative;
+}
+
+.have-children span::after {
+  position: absolute;
+  right: 30px;
+  top: 21px;
+  content: url(images/Path\ 218.png);
+  color: #fff;
+  transition: all 0.5s;
+}
+
+li.active.have-children span::after {
+  transform: rotate(90deg);
+}
+
+.sidebar-menu .have-children > ul {
+  display: none;
+}
+
+// --------------------------------cards----------------------------------.round1 {
+.round1 {
+  display: flex;
+  margin-left: 57px;
+  background-color: #ebfaff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.round2 {
+  display: flex;
+  margin-left: 57px;
+  background-color: #f8f4ff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.round3 {
+  display: flex;
+  margin-left: 57px;
+  background-color: #fff2f2;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.round4 {
+  display: flex;
+  margin-left: 57px;
+  background-color: #effff9;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+h5 {
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.status {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+.description {
+  font-size: 10px;
+  font-weight: 100;
+  text-align: center;
+  margin-top: -10px;
+  color: #ada9bf;
+}
+.time {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ada9bf;
+}
+
+// ------------------------charts and calendar------------------------------------------------
+#multi-line-chart {
+  //   position: relative;
+  //   top: 19px;
+}
+.revenue {
+  font-size: 14px;
+  font-weight: bolder;
+  color: black;
+}
+.count {
+  color: #b5b5b5;
+  font-size: 12px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+#single-line-chart {
+  //   position: relative;
+  //   top: -3px;
+}
+.x-axis {
+  font-size: 12px;
+  margin-left: 75px;
+  text-align: center;
+  color: #b5b5b5;
+}
+
+table {
+  border-collapse: collapse;
+  background: white;
+  margin-top: -16px;
+  /* left: 10px; */
+  color: black;
+}
+
+th,
+td {
+  white-space: 10px;
+  font-weight: bold;
+  padding: 11px;
+  font-size: 10px;
+}
+.left {
+  margin-top: -31px;
+}
+.right {
+  margin-left: 222px;
+  margin-top: -56px;
+}
+h3 {
+  margin-top: -34px;
+  margin-left: 71px;
+  margin: -34 0 0 71;
+  font-weight: bolder;
+  font-size: 14px;
+  color: black;
+}
+.dot1 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 60px;
+  top: 331px;
+  background: #3941ff;
+  border-radius: 50%;
+}
+.holiday {
+  color: #7e8fa0;
+  font-size: 9px;
+  top: -2px;
+  left: -4px;
+  position: absolute;
+  width: 122px;
+}
+.dot2 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 188px;
+  top: 331px;
+  background: #14d114;
+  border-radius: 50%;
+}
+.meeting {
+  color: #7e8fa0;
+  font-size: 9px;
+  margin: 0;
+  position: absolute;
+  top: -2px;
+  left: -11px;
+  /* right: -12px; */
+  width: 122px;
+}
+.dot3 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 60px;
+  top: 347px;
+  background: #ff52c3;
+  border-radius: 50%;
+}
+.session {
+  color: #7e8fa0;
+  font-size: 9px;
+  top: -2px;
+  left: -8px;
+  position: absolute;
+  width: 122px;
+}
+.dot4 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 191px;
+  top: 85px;
+  background: #ff52c3;
+  border-radius: 50%;
+}
+.dot5 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 55px;
+  top: 119px;
+  background: #3941ff;
+  border-radius: 50%;
+}
+.dot6 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 193px;
+  top: 156px;
+  background: #14d114;
+  border-radius: 50%;
+}
+.dot7 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 90px;
+  top: 194px;
+  background: #14d114;
+  border-radius: 50%;
+}
+.dot8 {
+  height: 24px;
+  width: 26px;
+  position: absolute;
+  left: 140px;
+  top: 80px;
+  border: 2px solid #b24aff;
+  border-radius: 50%;
+}
+
+// -------------------------------Project table--------------------------------------------------
+
+.project-history-table {
+  background-color: #ffffff;
+  display: flex;
+  /* position: absolute; */
+  margin-left: 96px;
+  border-collapse: collapse;
+  margin-top: 73px;
+  width: 80%;
+  border-spacing: 20px;
+  border-color: #ada9bf;
+  /* margin: 0 auto; */
+  padding: 0px;
+}
+
+.table-caption {
+  padding-bottom: 15px;
+}
+.project-history-table td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.project-history-table tr {
+  border-bottom: 1px solid #ada9bf;
+}
+
+.table-caption .p1 {
+  color: #2b2838;
+  text-align: left;
+  font-size: 16px;
+  /* margin-bottom: 5px; */
+}
+
+.table-caption .p2 {
+  color: #ada9bf;
+  font-size: 13px;
+  text-align: left;
+  /* margin-bottom: 20px; */
+}
+
+.table-header {
+  color: #ada9bf;
+  font-size: 14px;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.project-history-table td .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.indicator {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.project-history-table .align-dot {
+  text-align: center;
+}
+
+.para {
+  line-height: 7px;
+}
+.project-history-table .status {
+  color: #ada9bf;
+  font-size: 8px;
+  padding-right: 26px;
+}
+
+.project-history-table .sp1 {
+  color: #ada9bf;
+  font-size: 10px;
+}
+.project-history-table .year {
+  color: #2b2838;
+  font-size: 10px;
+}
+
+.project-history-table .top-container {
+  padding-left: 510px;
+}
+
+.project-history-table .dropdown {
+  width: 8px;
+  height: 5px;
+}
+
+.pagination {
+  margin-top: -52px;
+  margin-left: 436px;
+}
+
+.pagination a {
+  color: black;
+  /* float: left; */
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.page-display {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #bbb7cd;
+  font-size: 13px;
+}

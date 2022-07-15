@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="trial.css">
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse visible-xs">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Age</a></li>
+            <li><a href="#">Gender</a></li>
+            <li><a href="#">Geo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- ---------------------------------left-side menu---------------------------------------------- -->
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-2 sidenav hidden-xs left-menu">
+          <header class="header">
+            <img class="alex" src="images/Mask Group 5.png" />
+            <h2>Alex Labley <img src="images/Path 72.png" /></h2>
+            <p>Module Lead - UX</p>
+          </header>
+          <ul class="sidebar-menu">
+            <li class="have-children">
+              <a href="#"
+                ><span class="dashboard"><img src="images/Forma 1.png" /></span
+                >Dasboard</a
+              >
+              <ul>
+                <li><a href="#">Company Revenue</a></li>
+                <li><a href="#">Company Growth</a></li>
+                <li><a href="#">Project History</a></li>
+              </ul>
+            </li>
+            <li class="have-children">
+              <a href="#"
+                ><span class="group"><img src="images/organization.png" /></span 
+                >Group</a
+              >
+              <ul>
+                <li><a href="#">Company Revenue</a></li>
+                <li><a href="#">Company Growth</a></li>
+                <li><a href="#">Project History</a></li>
+              </ul>
+            </li>
+            <li class="have-children">
+              <a href="#" 
+                ><span class="blog"><img src="images/blogging.png" /></span>Blog</a
+              >
+              <ul>
+                <li><a href="#">Company Revenue</a></li>
+                <li><a href="#">Company Growth</a></li>
+                <li><a href="#">Project History</a></li>
+              </ul>
+            </li>
+            <li class="have-children">
+              <a href="#" 
+                ><span class="forum"><img src="images/speech-bubbles.png" /></span
+                >Forum</a
+              >
+              <ul>
+                <li><a href="#">Company Revenue</a></li>
+                <li><a href="#">Company Growth</a></li>
+                <li><a href="#">Project History</a></li>
+              </ul>
+            </li>
+            <li class="have-children">
+              <a href="#" 
+                ><span class="articles"
+                  ><img src="images/content-writing.png" /></span
+                >Articles</a
+              >
+              <ul>
+                <li><a href="#">Company Revenue</a></li>
+                <li><a href="#">Company Growth</a></li>
+                <li><a href="#">Project History</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- <br /> -->
+
+        <div class="col-sm-10 dashboard-color">
+          <!-- <div class="well"> -->
+            <h4>Dashboard</h4>
+            <p>Some text..</p>
+          <!-- </div> -->
+        </div>
+          <!-- =========================cards====================================== -->
+          <div class="col-sm-8 main-color">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="well">
+                  <span class="round1"><img src="images/working-briefcase.png"></span>
+                  <h5 class="app">Projects</h5>
+                  <p class="status">02</p>
+                  <p class="description">On Going Projects</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <span class="round2"><img src="images/calendar (1).png"></span>
+                  <h5 class="app">LMS</h5>
+                  <p class="status">08<span class="time">/15</span></p>
+                  <p class="description">Available Leave</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <span class="round3"><img src="images/online-learning.png"></span>
+                  <h5 class="app">Training</h5>
+                  <p class="status">10<span class="time">/24</span></p>
+                  <p class="description">Training Hours</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <span class="round4"><img src="images/calendar (2).png"></span>
+                  <h5 class="app">TAS Allocation</h5>
+                  <p class="status">80<span class="time">/Hrs</span></p>
+                  <p class="description">Jejudo-cardio-iOS</p>
+                </div>
+              </div>
+            </div>
+            <!-- ---------------------charts & calendar------------------------------------------ -->
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="well">
+                  <p class="revenue">
+                    Company Revenue<span class="count">Million</span>
+                  </p>
+                  <canvas
+                    id="multi-line-chart"
+                    style="max-width: 300px; height: 273px"
+                  ></canvas>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="well">
+                  <p class="revenue">
+                    Company Growth<span class="count">Million</span>
+                  </p>
+                  <canvas
+                    id="single-line-chart"
+                    style="max-width: 300px; height: 243px"
+                  ></canvas>
+                  <span class="x-axis">Year 1986 - 2020</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="well">
+                  <img class="left" src="images/Path 53.png" />
+                  <h3>June 2019</h3>
+                  <img class="right" src="images/Path 54.png" />
+                  <br />
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="color: #ada9bd">S</th>
+                        <th style="color: #ada9bd">M</th>
+                        <th style="color: #ada9bd">T</th>
+                        <th style="color: #ada9bd">W</th>
+                        <th style="color: #ada9bd">T</th>
+                        <th style="color: #ada9bd">F</th>
+                        <th style="color: #ada9bd">S</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr></tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10<span class="dot8"></span></td>
+                        <td>11<span class="dot4"></span></td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14<span class="dot5"></span></td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24<span class="dot6"></span></td>
+                        <td>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29<span class="dot7"></span></td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td style="color: #ada9bd">1</td>
+                        <td style="color: #ada9bd">2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <span class="dot1"
+                    ><p class="holiday">Company Holiday</p></span
+                  >
+                  <span class="dot2"
+                    ><p class="meeting">Project Meeting</p></span
+                  >
+                  <span class="dot3"
+                    ><p class="session">Training Session</p></span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------Project table---------------------------------------------------------------->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="well">
+                  <table class="project-history-table">
+                    <tr>
+                      <th colspan="7" class="table-caption">
+                        <p class="p1">Project History</p>
+                        <p class="p2">Last update on March 2019</p>
+                        <div class="top-container">
+                          <span class="indicator" style="background-color: #41a534"></span>
+                          <span class="status">COMPLETED</span>
+                          <span class="indicator" style="background-color: #ff813e"></span>
+                          <span class="status">IN-PROGRESS</span>
+                          <span class="sp1">Year</span>
+                          <span class="year">2019</span>
+                          <span
+                            ><img class="dropdown" src="images/Path 66.png" alt="image"
+                          /></span>
+                        </div>
+                      </th>
+                    </tr>
+              
+                    <tr>
+                      <th class="table-header">Projects Name</th>
+                      <th class="table-header">Project Description</th>
+                      <th class="table-header">Project Type</th>
+                      <th class="table-header">Duration</th>
+                      <th class="table-header">Start Date</th>
+                      <th class="table-header">End Date</th>
+                      <th class="table-header">Status</th>
+                    </tr>
+                    <tr>
+                      <td><img src="images/Group 161.png" alt="Project name" /></td>
+                      <td>
+                        <p class="para">S-patch Cardio is a real-time</p>
+                        <p class="para">ECG monitoring solution</p>
+                      </td>
+                      <td>Mobile App</td>
+                      <td>3-Months</td>
+                      <td>06/08/2019</td>
+                      <td>12/11/2019</td>
+                      <td class="align-dot">
+                        <span class="dot" style="background-color: #ff813e"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="images/CAR Registered Logo - SMALL.png"
+                          alt="Project name"
+                        />
+                      </td>
+                      <td>
+                        <p class="para">CAR is committed to leading</p>
+                        <p class="para">the Sub-Prime Automotive…</p>
+                      </td>
+                      <td>Mobile App</td>
+                      <td>3-Months</td>
+                      <td>14/04/2019</td>
+                      <td>22/08/2019</td>
+                      <td class="align-dot">
+                        <span class="dot" style="background-color: #41a534"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/BH color logo.png" alt="Project name" /></td>
+                      <td>
+                        <p class="para">BenefitHub’s mission is to help</p>
+                        <p class="para">millions of people improve…</p>
+                      </td>
+                      <td>Mobile App</td>
+                      <td>3-Months</td>
+                      <td>06/01/2019</td>
+                      <td>12/04/2019</td>
+                      <td class="align-dot">
+                        <span class="dot" style="background-color: #41a534"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/Image 1.png" alt="Project name" /></td>
+                      <td>
+                        <p class="para">The Knowledge and Human</p>
+                        <p class="para">Development Authority (KHDA)…</p>
+                      </td>
+                      <td>Web App</td>
+                      <td>6-Months</td>
+                      <td>14/05/2018</td>
+                      <td>22/11/2018</td>
+                      <td class="align-dot">
+                        <span class="dot" style="background-color: #41a534"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="7">
+                        <span class="page-display">Page 1/20</span>
+                        <span class="pagination">
+                          <a href="#">&laquo;</a>
+                          <a href="#">1</a>
+                          <a href="#">2</a>
+                          <a href="#">3</a>
+                          <a href="#">4</a>
+                          <a href="#">5</a>
+                          <a href="#">&raquo;</a>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                 
+                </div>
+              </div>
+              
+              </div>
+          </div>
+
+          
+          <!-- khsrgjhkhjhkjhkjh -->
+          <div class="col-sm-2 sidenav hidden-xs right-menu">
+            <h2>Logo</h2>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#section1">Dashboard</a></li>
+              <li><a href="#section2">Age</a></li>
+              <li><a href="#section3">Gender</a></li>
+              <li><a href="#section3">Geo</a></li>
+            </ul>
+            <!-- <br /> -->
+        
+          </div>
+        </div>
+
+      
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="chart-1.js"></script>
+    <script src="chart-2.js"></script>
+  </body>
+</html>
